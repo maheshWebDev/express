@@ -1,9 +1,9 @@
-// const path = require('path');
 
 const express = require('express');
-const adminController = require('../controller/routeController')
-const routes = express.Router();
+const controller = require('../controller/adminController')
 
-routes.get('/',adminController.shop)
+const router = express.Router();
 
-module.exports = routes
+router.get('/', controller.getProduct);
+
+module.exports = router;
